@@ -1,0 +1,14 @@
+<p id="inventory">
+				<span id="soldout-text">
+                  {% assign variant = product.variants.first %}
+                  {% if variant.available %}
+                    {% if variant.inventory_management != '' %}
+                        {% if current_variant.inventory_quantity <= 5 %}
+                            SOLD OUT FOR TODAY, ALL ORDERS WILL BE DELIVERED TOMORROW UNLESS YOU HAVE SELECTED A LATER DATE</div>
+                        {% endif %}
+                    {% else %}
+                        In stock
+                    {% endif %}
+                  {% endif %}
+        		</span>
+			</p>
